@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "dd2dada9-0d09-44a5-80b2-0a6658e39a4b",
+		"name": "Task Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43614190",
+		"_collection_link": "https://arth-9949538.postman.co/workspace/dd9333f0-9797-4392-850b-0e17d8904e5d/collection/43614190-dd2dada9-0d09-44a5-80b2-0a6658e39a4b?action=share&source=collection_link&creator=43614190"
+	},
+	"item": [
+		{
+			"name": "Get Tasks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Tasks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 51,\r\n    \"Task\": \"Cricket Practice\",\r\n    \"StartDate\": \"2025-08-27\",\r\n    \"EndDate\": \"2025-09-27\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Tasks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 51,\r\n        \"Task\": \"Football Practice\",\r\n        \"StartDate\": \"2025-08-27T00:00:00.000Z\",\r\n        \"EndDate\": \"2025-09-27T00:00:00.000Z\",\r\n        \"status\": true,\r\n        \"_id\": \"68286af4ece9dfd862e8d41a\",\r\n        \"createdAt\": \"2025-05-17T10:54:44.815Z\",\r\n        \"updatedAt\": \"2025-05-17T10:54:44.815Z\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/tasks/68286af4ece9dfd862e8d41a"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/api/tasks/68286af4ece9dfd862e8d41a"
+			},
+			"response": []
+		}
+	]
+}
